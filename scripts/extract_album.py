@@ -87,7 +87,6 @@ def should_skip_folder(folder_path):
         "_debug_album",
         "_debug_json",
         "prompts",
-        "prompts_album",
         "__pycache__"
     ]
 

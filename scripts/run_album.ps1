@@ -1,7 +1,7 @@
 # ============================================================
 # Album-Level AI FLAC Metadata Pipeline
 # With:
-# - prompts_album auto loading
+# - prompts auto loading
 # - album-level metadata normalization
 # - album_profile.json support
 # - multi-disc folder support
@@ -13,14 +13,14 @@
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false)
 $OutputEncoding = [System.Text.UTF8Encoding]::new($false)
 
-# Root = folder where this script is located
+# Script folder contains the pipeline code and debug assets.
 $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
-$root = $scriptDir
+$root = Split-Path -Parent $scriptDir
 
 # Required paths
 $extractAlbumPy = Join-Path $scriptDir "extract_album.py"
 $writeAlbumPy   = Join-Path $scriptDir "write_album.py"
-$promptDir      = Join-Path $scriptDir "prompts_album"
+$promptDir      = Join-Path $root "prompts"
 
 # Debug folder
 $debugDir = Join-Path $scriptDir "_debug_album"
@@ -209,7 +209,6 @@ function Get-AlbumFolders {
             $_.FullName -notlike "$PromptDir*" -and
             $_.FullName -notlike "*_debug_json*" -and
             $_.FullName -notlike "*_debug_album*" -and
-            $_.FullName -notlike "*prompts_album*" -and
             $_.FullName -notlike "*prompts*"
         }
 
@@ -337,22 +336,22 @@ if (-not (Test-Path -LiteralPath $writeAlbumPy)) {
 }
 
 if (-not (Test-Path -LiteralPath $promptDir)) {
-    Write-Host "ERROR: prompts_album folder not found: $promptDir"
-    "ERROR: prompts_album folder not found: $promptDir" | Add-Content -LiteralPath $logFile -Encoding utf8
+    Write-Host "ERROR: prompts folder not found: $promptDir"
+    "ERROR: prompts folder not found: $promptDir" | Add-Content -LiteralPath $logFile -Encoding utf8
     exit 1
 }
 
 
 # ============================================================
-# Load prompt files from prompts_album
+# Load prompt files from prompts
 # ============================================================
 
 $promptFiles = Get-ChildItem -LiteralPath $promptDir -File -Filter "*.txt" |
     Sort-Object Name
 
 if ($promptFiles.Count -eq 0) {
-    Write-Host "ERROR: No prompt files found in prompts_album."
-    "ERROR: No prompt files found in prompts_album." | Add-Content -LiteralPath $logFile -Encoding utf8
+    Write-Host "ERROR: No prompt files found in prompts."
+    "ERROR: No prompt files found in prompts." | Add-Content -LiteralPath $logFile -Encoding utf8
     exit 1
 }
 
@@ -567,11 +566,11 @@ Final output requirements:
 
         # album_profile.json priority:
         # 1. album folder\album_profile.json
-        # 2. script root\album_profile.json
+        # 2. project root\album_profile.json
         $albumProfile = $null
 
         $albumProfileLocal = Join-Path $albumPath "album_profile.json"
-        $albumProfileRoot  = Join-Path $scriptDir "album_profile.json"
+        $albumProfileRoot  = Join-Path $root "album_profile.json"
 
         if (Test-Path -LiteralPath $albumProfileLocal) {
             $albumProfile = $albumProfileLocal
