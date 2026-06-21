@@ -1,6 +1,7 @@
 # AI FLAC Metadata Pipeline
 
 這個專案會掃描音樂根目錄下的 FLAC 檔，依專輯分批呼叫 Gemini API 產生正規化 metadata，最後把結果寫回檔案並重新命名。
+[Medium 文章](https://medium.com/@duckong/nas-將-cd-收藏數位化-打造私人無損音樂串流平台-特別篇-如何利用-ai-執行元數據正規化-b20d624dae19)
 
 ## 需求
 
