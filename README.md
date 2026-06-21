@@ -1,6 +1,6 @@
 # AI FLAC Metadata Pipeline
 
-這個專案會掃描音樂根目錄下的 FLAC 檔，依專輯分批呼叫 Copilot 產生正規化 metadata，最後把結果寫回檔案並重新命名。
+這個專案會掃描音樂根目錄下的 FLAC 檔，依專輯分批呼叫 Gemini 產生正規化 metadata，最後把結果寫回檔案並重新命名。
 
 ## 多片裝跨資料夾分組
 
