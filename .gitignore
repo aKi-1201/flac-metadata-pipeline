@@ -1,0 +1,13 @@
+_debug_album/
+_debug_json/
+scripts/_debug_album/
+scripts/_debug_json/
+scripts/.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+Folder.jpg
+desktop.ini
+Thumbs.db
+

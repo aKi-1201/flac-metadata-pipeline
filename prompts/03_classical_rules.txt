@@ -1,0 +1,41 @@
+【古典音樂規則】
+
+1. artist 排列順序：
+[Composer, Performer / Soloist, Orchestra / Ensemble, Conductor]
+- 無該角色則省略，不可使用空字串
+
+2. 鋼琴獨奏專輯：
+- 若為鋼琴獨奏且無 orchestra / conductor：
+  artist 必須為 [Composer, Pianist]
+
+3. 專輯一致性：
+- 同一專輯 albumartist 必須一致
+- 不得在不同曲目間出現不同 albumartist
+
+4. title 正規化：
+- 保留：作品名稱、樂章編號（I, II…）、樂章名稱
+- 不得刪除羅馬數字樂章編號
+- title 以簡潔且可辨識為原則，不可過長，必要時可刪除速度標記
+
+5. title 大小寫：
+- 英文使用簡化 Title Case（主要單字大寫）
+- 法文 / 義大利文保持自然大小寫：
+  例如：
+  Reflets dans l'eau
+  Hommage à Rameau
+- 不要全部大寫或錯誤 Title Case：
+  ✗ Reflets Dans L'Eau
+
+6. 作品編號規則：
+- 使用標準縮寫並保持大寫：
+  No., Op., K., D., Hob., BWV
+- 保持空格：
+  正確："No. 1", "Op. 27"
+- 不得使用小寫（✗ op., no.）
+- 不刪除必要編號
+
+7. 名稱標準化：
+- Frédéric Chopin（不可 Fryderyk）
+- Sergei Rachmaninoff（不可 Sergey Rachmaninov）
+- Pyotr Ilyich Tchaikovsky（不可 Il'yich）
+- Wiener Philharmoniker（不可 Vienna Philharmonic）

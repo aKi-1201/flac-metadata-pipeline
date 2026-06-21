@@ -1,0 +1,32 @@
+【通用 metadata 規則】
+
+1. composer：
+- 必須根據 album、title、資料夾名稱、整張專輯曲目結構或既有 tags 推論作曲者。
+- 如果可以合理推論 composer，composer 不得為空陣列。
+- 西洋古典與現代音樂作曲者使用標準英文全名。
+- 亞洲音樂家可使用漢字姓名。
+- composer 必須是字串陣列。
+
+2. artist：
+- artist 的順序必須是：
+  [Composer, Performer, Orchestra, Conductor]
+- 若某個角色不存在，直接跳過。
+- 不得插入空字串。
+- artist 必須是字串陣列。
+
+3. albumartist：
+- 通常使用主要演出者、主要樂團或主要 ensemble。
+- 若是鋼琴獨奏專輯，使用鋼琴家。
+- albumartist 必須是字串陣列。
+- 整張專輯的 albumartist 必須是同一位。
+
+4. 名稱清理：
+- 樂團或 ensemble 名稱開頭若有 "The"，必須移除。
+- 人名前的頭銜必須移除，例如 Sir、Dr.、Lord。
+
+5. 名稱標準化：
+優先使用 Spotify 與 Apple Music 上的官方標準名稱。
+- 樂團範例：Capella Istropolitana、Slovak Philharmonic Orchestra。
+- 尊重該樂團的官方母語名稱，如：Wiener Philharmoniker、Wiener Symphoniker
+- 西洋古典/現代音樂家：使用英文全名 (例：Giacomo Puccini, Johannes Brahms)。
+- 日本音樂家：使用漢字姓名 (例：久石讓)。
