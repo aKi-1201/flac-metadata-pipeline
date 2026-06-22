@@ -39,3 +39,12 @@
 - Sergei Rachmaninoff（不可 Sergey Rachmaninov）
 - Pyotr Ilyich Tchaikovsky（不可 Il'yich）
 - Wiener Philharmoniker（不可 Vienna Philharmonic）
+
+8. genre 古典音樂判斷規則：
+- 正統西方古典音樂（交響樂、奏鳴曲、協奏曲、室內樂、藝術歌曲、宗教聲樂等）→ Classical
+- 電影、電視、遊戲配樂（含久石讓電影配樂專輯）→ Soundtrack
+- 明確融合流行 / 搖滾元素的古典改編（如 crossover 企劃專輯）→ Classical Crossover
+- 純器樂、強調氛圍放鬆的現代作品（如 Ludovico Einaudi 獨奏專輯）→ New Age 或 Easy Listening
+- 判斷優先順序：Classical > Soundtrack > Classical Crossover > New Age > Easy Listening
+  - 有疑慮時優先選 Classical，不選 Classical Crossover。
+  - 同一作曲家的不同專輯可能歸屬不同 genre，以專輯用途為準。

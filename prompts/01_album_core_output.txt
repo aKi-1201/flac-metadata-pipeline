@@ -15,6 +15,7 @@
 
 {
   "album": "",
+  "genre": "",
   "tracks": [
     {
       "file": "",
@@ -22,17 +23,20 @@
       "artist": [],
       "albumartist": [],
       "title": "",
-      "tracknumber": ""
+      "tracknumber": "",
+      "genre": ""
     }
   ]
 }
 
 【資料型別規則】
 1. album 必須是字串。
-2. tracks 必須是陣列。
-3. 每個 track 都必須保留原始 file 路徑。
-4. composer 必須是字串陣列。
-5. artist 必須是字串陣列。
-6. albumartist 必須是字串陣列。
-7. title 必須是字串。
-8. tracknumber 必須是兩位數字字串，例如 "01"。
+2. 頂層 genre 代表整張專輯的類型，必須是字串。
+3. tracks 必須是陣列。
+4. 每個 track 都必須保留原始 file 路徑。
+5. composer 必須是字串陣列。
+6. artist 必須是字串陣列。
+7. albumartist 必須是字串陣列。
+8. title 必須是字串。
+9. tracknumber 必須是兩位數字字串，例如 "01"。
+10. 每個 track 的 genre 必須與頂層 genre 相同，整張專輯統一使用同一個值。

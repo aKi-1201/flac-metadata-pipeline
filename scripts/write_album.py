@@ -524,6 +524,11 @@ def main():
             audio["title"] = [title]
             audio["tracknumber"] = [tracknumber]
 
+            # Genre: write if AI returned a non-empty value
+            genre_value = str(track.get("genre", "") or "").strip()
+            if genre_value:
+                audio["genre"] = [genre_value]
+
             # Canonical disc fields for this library.
             audio["discnumber"] = [discnumber]
             audio["totaldiscs"] = [totaldiscs]
@@ -557,6 +562,8 @@ def main():
         print(f"  tracknumber: {tracknumber}")
         print(f"  discnumber: {discnumber}")
         print(f"  totaldiscs: {totaldiscs}")
+        if genre_value:
+            print(f"  genre: {genre_value}")
 
         # Rename file
         directory = os.path.dirname(file_path)

@@ -141,8 +141,11 @@ def main():
             contents=prompt_text,
             config=types.GenerateContentConfig(
                 temperature=0.0,
-                max_output_tokens=16384,
+                max_output_tokens=64000,
                 response_mime_type="application/json",
+                thinking_config=types.ThinkingConfig(
+                    thinking_level="low"
+                ),
             ),
         )
 

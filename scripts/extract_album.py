@@ -149,7 +149,7 @@ def main():
         "source_folders": valid_folders,
         "album": album_name,
         "track_count": len(tracks),
-        "tracks": tracks
+        "tracks": tracks,
     }
 
     print(json.dumps(output, ensure_ascii=False, indent=2))
