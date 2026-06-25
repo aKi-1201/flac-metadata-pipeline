@@ -38,5 +38,5 @@
 6. artist 必須是字串陣列。
 7. albumartist 必須是字串陣列。
 8. title 必須是字串。
-9. tracknumber 必須是兩位數字字串，例如 "01"。
+9. tracknumber 必須是兩位數字字串。
 10. 每個 track 的 genre 必須與頂層 genre 相同，整張專輯統一使用同一個值。
