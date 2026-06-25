@@ -29,7 +29,7 @@
 - 樂團範例：Capella Istropolitana、Slovak Philharmonic Orchestra。
 - 尊重該樂團的官方母語名稱，如：Wiener Philharmoniker、Wiener Symphoniker
 - 西洋古典/現代音樂家：使用英文全名 (例：Giacomo Puccini, Johannes Brahms)。
-- 日本音樂家：使用漢字姓名 (例：久石讓)。
+- 日本音樂家：使用漢字姓名 (例：小澤征爾 不要用 Seiji Ozawa)。
 
 6. genre：
 - 整張專輯必須統一使用同一個 genre，不得逐曲不同。

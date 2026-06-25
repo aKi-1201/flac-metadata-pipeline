@@ -512,11 +512,8 @@ def main():
 
             discnumber, totaldiscs = resolve_disc_fields(audio, track)
 
-            # Optional album tag from AI output
-            if "album" in track and str(track.get("album", "")).strip():
-                audio["album"] = [str(track.get("album", "")).strip()]
-            elif isinstance(data, dict) and str(data.get("album", "")).strip():
-                audio["album"] = [str(data.get("album", "")).strip()]
+            # album: intentionally NOT overwritten.
+            # The existing FLAC album tag is preserved as-is.
 
             audio["composer"] = composer
             audio["artist"] = artist
