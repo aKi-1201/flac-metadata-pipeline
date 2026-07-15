@@ -34,7 +34,7 @@
 6. genre：
 - 整張專輯必須統一使用同一個 genre，不得逐曲不同。
 - 嚴格只能從以下清單中選擇一個，禁止使用清單以外的值：
-  Classical, Soundtrack, Easy Listening, New Age, World, Folk, Jazz, Pop, Rock, R&B, Electronic, Hip-Hop
+  Classical, Classical Crossover, Soundtrack, Easy Listening, New Age, World, Folk, Jazz, Pop, Rock, R&B, Electronic, Hip-Hop
 - 禁止中英混用，禁止使用曲式或時期作為 genre（如：Symphony、Baroque、Opera）。
 - 判斷依據優先順序：
   a. 參考 input JSON 中既有的 genre 值（若已符合上方清單，優先沿用）。

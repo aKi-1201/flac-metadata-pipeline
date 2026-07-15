@@ -9,7 +9,7 @@ from mutagen.flac import FLAC
 # Settings
 # ============================================================
 
-FILENAME_MAX_LENGTH = 100
+FILENAME_MAX_LENGTH = 60
 
 
 # ============================================================
