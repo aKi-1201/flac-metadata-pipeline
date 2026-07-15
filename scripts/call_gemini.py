@@ -144,7 +144,7 @@ def main():
                 max_output_tokens=64000,
                 response_mime_type="application/json",
                 thinking_config=types.ThinkingConfig(
-                    thinking_level="low"
+                    thinking_level="MEDIUM"
                 ),
             ),
         )
